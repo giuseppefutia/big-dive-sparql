@@ -1,0 +1,11 @@
+@prefix ns0:	<http://myontology.org/> .
+@prefix dbr:	<http://dbpedia.org/resource/> .
+dbr:Stanley_Kubrick	ns0:workWithDistributor	dbr:United_Artists ,
+		dbr:Seafarers_International_Union_of_North_America ,
+		dbr:Joseph_Burstyn ,
+		<http://dbpedia.org/resource/Warner_Bros.> ,
+		dbr:Metro-Goldwyn-Mayer ,
+		dbr:Columbia_Pictures ,
+		dbr:RKO_Pictures ,
+		dbr:Universal_Studios ,
+		"Metro-Goldwyn-Mayer"@en .
