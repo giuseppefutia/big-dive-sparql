@@ -1,7 +1,7 @@
 # SPARQL crash course
-Crash course on the SPARQL query language within the Big Dive training program
+Crash course on the SPARQL query language within the Big Dive training program.
 
-Contents published on this repository are based on the W3C Candidate Recommendation “SPARQL Query Language for RDF” from http://www.w3.org/TR/rdf-sparql-query/ 
+Contents published on this repository are based on the W3C Candidate Recommendation “SPARQL Query Language for RDF” from http://www.w3.org/TR/rdf-sparql-query/.
 
 ## SPARQL main idea: graph pattern matching
 * Describe subgraphs of the queried RDF graph.
