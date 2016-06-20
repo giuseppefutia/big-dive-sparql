@@ -101,11 +101,11 @@ SELECT DISTINCT ?director ?directorLabel
 WHERE {
     ?movie <http://dbpedia.org/ontology/director> ?director .
     ?director rdfs:label ?directorLabel .
-    FILTER (langMatches(lang(?directorLabel), "EN")) .
+    FILTER (langMatches(lang(?directorLabel), "IT")) .
 } LIMIT 50
 ```
 
-[Perform the query](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=SELECT+DISTINCT+%3Fdirector+%3FdirectorLabel%0D%0AWHERE+{%0D%0A++++%3Fmovie+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2Fdirector%3E+%3Fdirector+.%0D%0A++++%3Fdirector+rdfs%3Alabel+%3FdirectorLabel+.%0D%0A++++FILTER+%28langMatches%28lang%28%3FdirectorLabel%29%2C+%22EN%22%29%29+.%0D%0A}+LIMIT+50&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on)
+[Perform the query](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=SELECT+DISTINCT+%3Fdirector+%3FdirectorLabel%0D%0AWHERE+{%0D%0A++++%3Fmovie+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2Fdirector%3E+%3Fdirector+.%0D%0A++++%3Fdirector+rdfs%3Alabel+%3FdirectorLabel+.%0D%0A++++FILTER+%28langMatches%28lang%28%3FdirectorLabel%29%2C+%22IT%22%29%29+.%0D%0A}+LIMIT+50&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on)
 
 ### Built-in filters
 
