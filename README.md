@@ -7,6 +7,15 @@ Contents published on this repository are based on the W3C Candidate Recommendat
 * Describe subgraphs of the queried RDF graph.
 * Subgraphs that match your description yield a result.
 
+## SPARQL Architecture
+* SPARQL queries are executed against RDF datasets, consisting of RDF graphs. (More on this later.)
+* A SPARQL endpoint accepts queries and returns results via HTTP.
+* The results of SPARQL queries can be returned and/or rendered in a variety of formats:
+    * XML. SPARQL specifies an XML vocabulary for returning tables of results.
+    * JSON. A JSON "port" of the XML vocabulary, particularly useful for Web applications.
+    * RDF. Certain SPARQL result clauses trigger RDF responses, which in turn can be serialized in a number of ways (RDF/XML, N-Triples, Turtle, etc.)
+    * HTML. When using an interactive form to work with SPARQL queries. Often implemented by applying an XSL transform to XML results.
+
 ## SPARQL basics
 
 * SPARQL variables start with a ? and can match any node (resource or literal) in the RDF dataset.
