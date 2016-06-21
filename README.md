@@ -3,10 +3,6 @@ Crash course on the SPARQL query language within the Big Dive training program.
 
 Contents published on this repository are based on the W3C Candidate Recommendation “SPARQL Query Language for RDF” from http://www.w3.org/TR/rdf-sparql-query/.
 
-## SPARQL main idea: graph pattern matching
-* Describe subgraphs of the queried RDF graph.
-* Subgraphs that match your description yield a result.
-
 ## SPARQL Architecture
 * SPARQL queries are executed against RDF datasets, consisting of RDF graphs.
 * A SPARQL endpoint accepts queries and returns results via HTTP.
@@ -21,7 +17,6 @@ Contents published on this repository are based on the W3C Candidate Recommendat
 * SPARQL variables start with a ? and can match any node (resource or literal) in the RDF dataset.
 * Triple patterns are just like triples, except that any of the parts of a triple can be replaced with a variable (pattern matching).
 * Variables named after the SELECT keyword are the variables that will be returned as results (~SQL).
-* The SELECT result clause returns a table of variables and values that satisfy the query.
 
 ## SPARQL query basic structure
 
@@ -73,7 +68,7 @@ WHERE {
 [Perform the query](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=%0D%0ASELECT+%3Fmovie+%3Fdistributor%0D%0AWHERE+{%0D%0A++++%3Fmovie+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2Fdirector%3E+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FStanley_Kubrick%3E+.%0D%0A++++%3Fmovie+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2Fdistributor%3E+%3Fdistributor+.%0D%0A}%0D%0A&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on)
 
 ### Excercise
-* Get the founders and the founding date of all film distribution houses of movies directed by Kubrick. 
+* Get founders and founding dates of all distribution houses of movies directed by Kubrick. 
 
 ## SPARQL modifiers
 The objective of modifiers is slicing, ordering, and otherwise rearranging query results.
@@ -144,7 +139,7 @@ WHERE {
 [Perform the query](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=SELECT+DISTINCT+%3Fdirector+%3FdirectorLabel+%3Fquote%0D%0AWHERE+%7B%0D%0A++++%3Fmovie+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2Fdirector%3E+%3Fdirector+.%0D%0A++++%3Fdirector+rdfs%3Alabel+%3FdirectorLabel+.%0D%0A++++OPTIONAL+%7B%3Fdirector+%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2Fquote%3E+%3Fquote%7D+.+%0D%0A++++FILTER+%28langMatches%28lang%28%3FdirectorLabel%29%2C+%22EN%22%29%29+.%0D%0A%7D%0D%0A&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on)
 
 ### Exercise
-* Get all directors in DBpedia. Get all movies in which these directors had the role of producers.
+* Get all directors in DBpedia and all movies in which these directors had the role of producers.
 
 ## ASK, DESCRIBE, CONSTRUCT
 In addition to the SELECT clause, you can specify other keywords depending on the result we want to achieve with our queries.
