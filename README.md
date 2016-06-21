@@ -141,19 +141,8 @@ WHERE {
 ### Exercise
 * Get all directors in DBpedia and all movies in which these directors had the role of producers.
 
-## ASK, DESCRIBE, CONSTRUCT
+## DESCRIBE and CONSTRUCT
 In addition to the SELECT clause, you can specify other keywords depending on the result we want to achieve with our queries.
-
-```
-ASK WHERE {
-   <http://dbpedia.org/resource/Quentin_Tarantino> <http://dbpedia.org/ontology/birthDate> ?qtBirthDate .
-   <http://dbpedia.org/resource/Stanley_Kubrick> <http://dbpedia.org/ontology/birthDate> ?skBirthDate .
-   FILTER(?skBirthDate < ?qtBirthDate) .
-}
-```
-
-[Perform the query](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=ASK%0D%0AWHERE+%7B%0D%0A+++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FQuentin_Tarantino%3E+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FbirthDate%3E+%3FqtBirthDate+.%0D%0A+++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FStanley_Kubrick%3E+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FbirthDate%3E+%3FskBirthDate+.%0D%0A+++FILTER%28%3FskBirthDate+%3C+%3FqtBirthDate%29+.%0D%0A%7D&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on)
-
 
 ```
 DESCRIBE ?movie {
